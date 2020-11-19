@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Pagina completa</title>
+        <meta charset="UTF-8">
+        <meta name="viewport">
+        <script type="text/javascript" src="Js/jquery-3.5.1.min.js"></script>
+        <script type="text/javascript" src="Js/jquery-ui-1.12.1/jquery-ui.min.js"></script>
+        <link rel="stylesheet" href="Js/jquery-ui-1.12.1/jquery-ui.structure.min.css">
+        <link rel="stylesheet" href="Js/jquery-ui-1.12.1/jquery-ui.theme.min.css">
+        <script type="text/javascript" src="JS/funcion.js"></script>
+        <link rel="stylesheet" href="flexslider.css" type="text/css">
+        
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <script src="JS/jquery.flexslider.js"></script>
+        <script type="text/javascript" charset="utf-8">
+
+</script>
+       
+        <style>
+
+            body{
+                background-image: url(img/hojas.jpg);
+
+            }
+
+            #principal{
+                margin: auto;
+                margin-top: 50px;
+                text-align: center;
+                background: white;
+                height: 70%;
+                width: 70%;
+
+            }
+            #titulo1{
+
+                margin-left: 50px;
+                background-color: #006633;
+                padding: 5px;
+
+                margin-top: 15px;
+                width: 400px;
+                height: 70px;
+                float: left; 
+                color: white;
+                font-size: 350%;
+                font:  sans-serif;
+            }
+            #menu{
+                background-color:#333333;
+                margin-right: 50px;
+                margin-left:50px;
+
+            }
+            #menu ul{
+                list-style: none; 
+                margin: 0;
+                padding: 0;
+
+
+            }
+            #menu ul li{
+                display: inline-block;
+
+            }
+            #menu ul li a{
+                color:white;
+                display:block;
+                padding: 10PX 60px;
+                text-decoration: none;
+                font-weight: 900;
+                font: 125% sans-serif;
+            }
+            #menu ul li a:hover{
+                background-color: #ff9900;
+                font-weight: 900;
+                font: 125% sans-serif;
+
+            }
+            img{
+                height: auto;
+                width:100%;
+            }
+
+            #titulo2{
+                padding: 10px ;
+                width: 20%;
+
+
+            }
+            #div1{
+                margin: 40px;
+                text-align: justify;
+                width: 700px;
+                float: left;
+                margin-top: 1px;
+            }
+            #div2{
+                margin: 5px;
+                margin-right: 40px;
+                text-align: justify;
+                width: 300px;
+                float: right ;
+            }
+            #button{
+                clear: both;
+            }
+            #imagen{
+                background-image: url(img/caracol.jpg);
+                margin: 10px ;
+                width: 270px;
+                height: 200px;
+                background-size: 17em;
+            }
+            #acordeon{
+                margin-top: 400px;
+                width: 800px;
+                margin-left: 250px;
+               
+                
+            }
+            #contenedorReloj{
+                margin: 50px;
+                
+
+            }
+            #fecha{
+                color: white;
+                margin-left: 500px;
+                width: 200px;
+                height: 20px;
+                font-size: 12px;
+                background-color: #cc9900;
+                padding: 5px;
+                border-radius: 5px;
+            }
+            #hora{
+                color: white;
+                margin: 4px;
+                padding: 5px;
+                font-size: 15px;
+                background: #003333;
+                width: 100px;
+                margin-left: 550px;
+                border-radius: 5px;
+                border: 1px solid black ;
+            }
+            #Botones{
+                background:rgba(88,88,88, 0.5);
+                height: 140px;
+                width: 50px;
+                position: absolute;
+                margin-top: 400px;
+                text-align: center;
+
+            }
+            #verde{
+                width: 30px;
+                height: 30px;
+                margin: 3px;
+                margin-top: 10px;
+                background-image: url(img/2.png);
+                background-size: 25px;
+            }
+            #rojo{
+                width: 30px;
+                height: 30px;
+                margin: 3px;
+                margin-top: 10px;
+                background-image: url(img/1.png);
+                background-size: 25px;
+            }
+            #azul{
+                width: 30px;
+                height: 30px;
+                margin: 3px;
+                margin-top: 10px;
+                background-image: url(img/3.png);
+                background-size: 25px;
+            }
+            #Publicacion{
+                margin-left: 40px;
+                position: absolute;
+                color: cadetblue;
+            }
+            #Coment{
+                color: white;
+                background-color: green;
+                width: 100px;
+                height: 30px;
+                text-align: center;
+                margin-left: 640px;
+                padding-top:10px;
+            }
+            #Titulos{
+                margin:0%;
+            }
+            #quien{
+                background-image: url(img/lines.png);
+                text-align: center;
+            }
+            h3{
+                background:white;
+                width: 100px;
+                margin-left: 100px;
+            }
+            #barrade_bus{
+                margin-left: 800px;
+                padding: 20px;
+
+                margin-bottom: 80px;
+                float:bottom;
+            }
+            #inicio{
+                background: transparent;
+                border: none !important;
+                font-size:0;
+                background-image: url(img/arriba.png);
+                width: 32px;
+                height: 32px;
+            }
+
+
+        </style>
+    </head>
+    <body>
+
+        <div id="Botones">
+            <button id="verde"></button> <br>
+            <button id="rojo"></button><br>
+            <button id="azul"></button>
+        </div>      
+        <select name="fondo" id="fondo" onchange="cambia(this)">
+
+            <option disabled selected>Modo</option>
+            <option value="#1C1C1C">Oscuro</option>
+            <option value="white">Claro</option>        
+        </select>
+        <div id="principal">
+            <br>
+
+            <div>
+                <h1 id="titulo1">Practicando JS</h1>
+                <div><p id="barrade_bus"><input type="search"  placeholder='¿Que quieres buscar?'>
+                        <input type="submit" value="Buscar"></p></div>
+
+            </div>
+            <div id="menu">
+                <ul>
+                    <li><a>INICIO</a></li>
+                    <li><a>CALCULADORA</a></li>
+                    <li><a id="rel">RELOJ</a></li>
+                    <li><a>JUEGO DE CHAPUZA</a></li>
+                    <li><a id="contacto">CONTACTO</a></li>
+                </ul>
+            </div>
+
+            <div class="flexslider">
+		<ul class="slides">
+			<li class="flex-active-slide" data-thumb-alt="" style="width: 100%; float: left; margin-right: -100%; position: relative; opacity: 1; display: block; z-index: 2;">
+				<img src="img/rojo.jpg" alt="" draggable="false">
+				<section class="flex-caption">
+					
+				</section>
+			</li>
+			<li data-thumb-alt="" style="width: 100%; float: left; margin-right: -100%; position: relative; opacity: 0; display: block; z-index: 1;">
+				<img src="img/hojas.jpg" alt="" draggable="false">
+				<section class="flex-caption">
+					
+				</section>
+			</li>
+			<li data-thumb-alt="" style="width: 100%; float: left; margin-right: -100%; position: relative; opacity: 0; display: block; z-index: 1;">
+				<img src="img/cielo.jpg" alt="" draggable="false">
+				<section class="flex-caption">
+					
+				</section>
+			</li>
+		</ul>
+	<ol class="flex-control-nav flex-control-paging"><li><a href="#" class="flex-active">1</a></li><li><a href="#">2</a></li><li><a href="#">3</a></li></ol><ul class="flex-direction-nav"><li class="flex-nav-prev"><a class="flex-prev" href="#">Previous</a></li><li class="flex-nav-next"><a class="flex-next" href="#">Next</a></li></ul></div>
+
+            
+
+
+
+            <div id="Titulos">
+                <h1 id="titulo2" class="texto">Lorem ipsum</h1>
+                <h4 id="Publicacion">Publicado el Miercoles 11 de Abril del año 2016</h4>
+                <h5 id="Coment">92 Comentarios</h5>
+            </div>
+
+            <div id=div1 >
+                <p class="texto">Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro aut vel laboriosam possimus dignissimos consectetur blanditiis illo tempora amet sequi ab, quisquam provident incidunt voluptates necessitatibus atque cumque alias quos? Voluptatem ullam provident voluptatum exercitationem tempore quibusdam eligendi tenetur, deleniti ex repellat officiis maiores veniam, incidunt praesentium! Perferendis officia expedita repellat numquam Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro aut vel laboriosam possimus dignissimos consectetur blanditiis illo tempora amet sequi ab, quisquam provident incidunt voluptates necessitatibus atque cumque alias quos? Voluptatem ullam provident voluptatum exercitationem tempore quibusdam eligendi tenetur, deleniti ex repellat officiis maiores veniam, incidunt praesentium! Perferendis officia expedita repellat numquam Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro aut vel laboriosam possimus dignissimos consectetur blanditiis illo tempora amet sequi ab, quisquam provident incidunt voluptates necessitatibus atque cumque alias quos? Voluptatem ullam provident voluptatum exercitationem tempore quibusdam eligendi tenetur</p>
+            </div>
+            <div id="div2">
+                <div id="quien"><h3>¿Quien soy?</h3></div>
+                <div id="imagen"></div>
+                <p class="texto">Lorem ipsum dolor sit amet consectetur adipisicing elit. incidunt praesentium! Perferendis officia expedita repellat numquam </p>
+
+            </div>
+            <div>
+                <div id="acordeon">
+                    <h1>Sobre mi</h1>
+                    <div class="contenido">
+                        <p class="parrafo">
+                            Sobre mí, Acerca de, Sobre nosotros, Quiénes somos… <br>
+                           Pongámosle el nombre que quieras; lo importante es que en el próximo post te voy a enseñar<br>
+                           a escribir la página más personal de una web.<br>    
+                        </p>
+                    </div>
+
+                </div>
+            </div>  
+
+            <div id="contenedorReloj">
+                <div id="fecha"></div>
+                <br>
+                <br>
+                <div id="hora"></div>
+
+            </div>
+            <button  id="inicio"></button>
+
+
+
+        </div>
+
+
+    </body>
+</html>
