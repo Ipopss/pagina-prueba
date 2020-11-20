@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>CARRITO</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="hoja.css" type="text/css">
+        <script type="text/javascript" src="JS/jquery-3.5.1.min.js"></script>
+        <script type="text/javascript" src="JS/jquery-ui-1.12.1/jquery-ui.min.js"></script>
+        <link rel="stylesheet" href="JS/jquery-ui-1.12.1/jquery-ui.structure.min.css">
+        <link rel="stylesheet" href="JS/jquery-ui-1.12.1/jquery-ui.theme.min.css">
+        <script type="text/javascript" src="JS/Funcion.js"></script>
+        <script type="text/javascript" src="JS/C.js"></script>
+        <style>
+
+
+            #contenedorTabla{
+                margin: 350px;
+                width: 600px;
+                margin-top: 30px;
+            }
+            table{
+                width: 100%;
+                background-color:#666666;
+                text-align: left;
+                border-collapse: collapse;
+            }
+            th, td{
+                padding: 10px;
+
+            }
+            thead{
+                background-color:#cc6600;
+                border-bottom: solid 5px red;
+            }
+            #titulo{
+                font-family: Arial Black;
+                margin-left: auto;
+            }
+            #tt{
+                margin-top: 3%;
+                background-color: #cccccc;
+                text-align: left;
+                padding-left: 15px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1 id="ti">TIENDA ONLINE</h1>
+
+        <div id="principal">
+
+            <div id="menu">
+                <ul>
+                    <li><a id="1">LISTADO</a></li>
+                    <li><a id="2">CARRITO</a></li>
+                    <li><a id="3">HISTORIAL</a></li>
+
+                </ul>
+            </div>
+            <br>
+
+            <h2 id="titulo" style="color: white" >CARRITO DE COMPRAS</h2>
+            <div id="contenedorTabla">
+                <table id="tabla">
+                    <thead>
+                        <tr>
+                            <th>PRODUCTO:</th><th>PRECIO:</th>
+                        </tr>
+                    </thead>
+                    <tbody id="Mitabla">
+
+                    </tbody>
+                </table>
+                <div id="tt"><h4 id="Tota">Total: 00</h4>
+
+                </div>
+
+                <button id="ventas">Vender</button></div>
+        </div>
+    </body>
+</html>
